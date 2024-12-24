@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0b3d91;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.tree-container {
+  position: relative;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.star {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid yellow;
+  position: absolute;
+  top: -40px;
+}
+
+.layer {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid green;
+  position: relative;
+}
+
+.layer1 {
+  top: 0;
+}
+
+.layer2 {
+  border-bottom-color: darkgreen;
+  margin-top: -50px;
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 120px solid darkgreen;
+}
+
+.layer3 {
+  border-bottom-color: forestgreen;
+  margin-top: -50px;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 90px solid forestgreen;
+}
+
+.trunk {
+  width: 40px;
+  height: 60px;
+  background-color: brown;
+  margin-top: -20px;
+}
+
+.lights {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: twinkle 2s infinite;
+}
+
+.lights div {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 10px;
+  display: inline-block;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
